@@ -1,0 +1,98 @@
+.showcaseSection {
+  background: #060E1A;
+  color: #FFFFFF;
+  padding: 6.5rem 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glowBackdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(244, 119, 22, 0.12) 0%, rgba(56, 189, 248, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--electric-orange);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.description {
+  font-size: 1.05rem;
+  color: #94A3B8;
+  line-height: 1.7;
+}
+
+.switchNav {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.switchBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.switchBtn:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.switchBtnActive {
+  color: #FFFFFF;
+  background: rgba(244, 119, 22, 0.15);
+  border-color: var(--electric-orange);
+  box-shadow: 0 0 20px rgba(244, 119, 22, 0.25);
+}
+
+.inspectorWrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}

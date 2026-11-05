@@ -1,0 +1,85 @@
+/* GRIOT TECH — Button styles (Refined Modern) */
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-smooth);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Sizes ── */
+.sm {
+  padding: 0.5rem 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.md {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.9375rem;
+}
+
+.lg {
+  padding: 0.95rem 2.25rem;
+  font-size: 1rem;
+}
+
+/* ── Primary (solid orange) ── */
+.primary {
+  background-color: var(--electric-orange);
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 14px rgba(244, 119, 22, 0.3);
+}
+
+.primary:hover {
+  background-color: #E0680A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(244, 119, 22, 0.4);
+}
+
+/* ── Outline ── */
+.outline {
+  background-color: #FFFFFF;
+  color: var(--midnight-navy);
+  border: 1px solid var(--light-border);
+  box-shadow: 0 2px 8px rgba(16, 29, 53, 0.04);
+}
+
+.outline:hover {
+  border-color: var(--electric-orange);
+  color: var(--electric-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(16, 29, 53, 0.08);
+}
+
+/* ── Ghost ── */
+.ghost {
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+
+.ghost:hover {
+  color: var(--electric-orange);
+  background-color: rgba(244, 119, 22, 0.06);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--electric-orange);
+  outline-offset: 2px;
+}

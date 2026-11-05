@@ -1,0 +1,155 @@
+.detailContainer {
+  padding: 5rem 0;
+  background-color: #FFFFFF;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--midnight-navy);
+  margin-bottom: 2rem;
+}
+
+.deliverablesTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--midnight-navy);
+  margin-bottom: 1.25rem;
+}
+
+.deliverablesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.deliverableItem {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #334155;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkIcon {
+  color: var(--electric-orange);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.specCard {
+  background: #F8FAFC;
+  border: 1px solid var(--light-border);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px -10px rgba(16, 29, 53, 0.05);
+}
+
+.specHeader {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--electric-orange);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.techBadge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  box-shadow: 0 2px 6px rgba(16, 29, 53, 0.03);
+  color: var(--midnight-navy);
+}
+
+.archTitle {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  color: var(--muted-steel);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.archList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.archItem {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.faqSection {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--light-border);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.faqCard {
+  background: #F8FAFC;
+  border: 1px solid var(--light-border);
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.faqQuestion {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--midnight-navy);
+  margin-bottom: 0.75rem;
+}
+
+.faqAnswer {
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .overviewGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}

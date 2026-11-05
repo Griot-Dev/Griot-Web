@@ -1,0 +1,153 @@
+/* GRIOT TECH — Architecture section styles (Light & Crisp Technical) */
+
+.section {
+  overflow: hidden;
+  background-color: #F8FAFC;
+  border-top: 1px solid rgba(16, 29, 53, 0.05);
+  border-bottom: 1px solid rgba(16, 29, 53, 0.05);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ─── Text content ─── */
+.content {
+  position: sticky;
+  top: calc(72px + 2rem);
+  padding-top: 1.5rem;
+}
+
+.specsCard {
+  margin-top: 2rem;
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(16, 29, 53, 0.04);
+}
+
+.specsTitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--electric-orange);
+  margin-bottom: 1rem;
+}
+
+.specsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.specRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.specDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--electric-orange);
+  flex-shrink: 0;
+}
+
+/* ─── Architecture diagram ─── */
+.diagram {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+/* ─── Layer cards ─── */
+.layer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  box-shadow: 0 4px 16px rgba(16, 29, 53, 0.04);
+  transform: translateX(var(--layer-offset, 0px));
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  z-index: 1;
+}
+
+.layerHovered {
+  border-color: rgba(244, 119, 22, 0.5);
+  transform: translateX(calc(var(--layer-offset, 0px) + 6px)) scale(1.01);
+  box-shadow: 0 16px 36px -10px rgba(244, 119, 22, 0.15), 0 4px 12px rgba(16, 29, 53, 0.05);
+}
+
+.layerDimmed {
+  opacity: 0.45;
+  filter: grayscale(0.2);
+}
+
+.layerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.layerIndex {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--electric-orange);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.layerName {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--midnight-navy);
+}
+
+.layerTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.layerDescription {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(16, 29, 53, 0.06);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .content {
+    position: static;
+    padding-top: 0;
+  }
+  .layer {
+    transform: none !important;
+  }
+}

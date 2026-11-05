@@ -1,0 +1,274 @@
+/* GRIOT TECH — Global Styles (Light & Technical Modern Design) */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Brand palette - Elevated Bright / Clean Technical Theme */
+  --midnight-navy: #101D35;
+  --deep-blue: #0A1628;
+  --electric-orange: #F47716;
+  --orange-light: #FF8F3D;
+  --orange-glow: rgba(244, 119, 22, 0.15);
+  --warm-white: #FFFFFF;
+  --light-bg: #F8FAFC;
+  --light-surface: #FFFFFF;
+  --light-border: rgba(16, 29, 53, 0.08);
+  --light-border-hover: rgba(244, 119, 22, 0.35);
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --muted-steel: #64748B;
+  --navy-light: #1E293B;
+  --navy-mid: #0F172A;
+
+  /* Glass - Light Modern Glassmorphism */
+  --glass-dark: rgba(255, 255, 255, 0.85);
+  --glass-light: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(16, 29, 53, 0.08);
+  --glass-border-light: rgba(16, 29, 53, 0.12);
+  --glass-shadow: 0 10px 30px -10px rgba(16, 29, 53, 0.07), 0 4px 12px -2px rgba(16, 29, 53, 0.03);
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Spacing */
+  --section-padding: 6.5rem;
+  --container-max: 1320px;
+  --container-padding: 2rem;
+
+  color-scheme: light;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--light-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(244, 119, 22, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(16, 29, 53, 0.03) 0px, transparent 50%);
+}
+
+/* Smooth scroll override for Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+img, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+/* Selection */
+::selection {
+  background: rgba(244, 119, 22, 0.2);
+  color: var(--midnight-navy);
+}
+
+/* Container utility */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Section base */
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.section--dark {
+  background-color: var(--light-bg);
+}
+
+.section--navy {
+  background-color: #F1F5F9;
+}
+
+.section--light {
+  background-color: var(--warm-white);
+  color: var(--text-primary);
+}
+
+/* Eyebrow label */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--electric-orange);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 1.75rem;
+  height: 2px;
+  background: var(--electric-orange);
+  border-radius: 1px;
+}
+
+/* Section heading */
+.section-heading {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+.section-subheading {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* Glass card */
+.glass-card {
+  background: var(--light-surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--light-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--light-border-hover);
+  box-shadow: 0 16px 36px -10px rgba(244, 119, 22, 0.12), 0 6px 16px -2px rgba(16, 29, 53, 0.05);
+}
+
+.glass-card--light {
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--electric-orange);
+  outline-offset: 2px;
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 1.5rem;
+  background: var(--midnight-navy);
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  z-index: 99999;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid var(--electric-orange);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1.5rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--electric-orange);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 4rem;
+    --container-padding: 1.25rem;
+  }
+}

@@ -1,0 +1,137 @@
+.cookieBanner {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  max-width: 480px;
+  width: calc(100% - 3rem);
+  background: rgba(16, 29, 53, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  color: #FFFFFF;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.shieldIcon {
+  color: var(--electric-orange);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.policyLink {
+  color: var(--electric-orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.policyLink:hover {
+  color: #FF8F3D;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.acceptBtn {
+  background: var(--electric-orange);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.acceptBtn:hover {
+  background: #E0680A;
+  transform: translateY(-1px);
+}
+
+.declineBtn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #E2E8F0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.6rem 1.15rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.declineBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  background: rgba(52, 211, 153, 0.15);
+  color: #34D399;
+  border-radius: 999px;
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .cookieBanner {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    padding: 1.25rem;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .acceptBtn, .declineBtn {
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,392 @@
+/* GRIOT TECH — About Page Styles (Rich Bento Grid & 3D Interactive) */
+
+.aboutContainer {
+  padding: 4.5rem 0 6rem;
+  background-color: #FFFFFF;
+}
+
+/* ─── Hero Bento Grid ─── */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.bentoCard {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 2.25rem;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    0 12px 32px -8px rgba(15, 23, 42, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bentoCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 119, 22, 0.3);
+  box-shadow: 
+    0 20px 40px -12px rgba(244, 119, 22, 0.12),
+    0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+/* Bento Card: 3D Canvas Showcase */
+.spatialCard {
+  background: radial-gradient(circle at 50% 20%, #172847 0%, #0A1628 100%);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+}
+
+.canvasWrapper {
+  flex: 1;
+  width: 100%;
+  min-height: 250px;
+  margin: 1rem 0;
+}
+
+.spatialHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.spatialEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.725rem;
+  letter-spacing: 0.08em;
+  color: #38BDF8;
+  font-weight: 600;
+}
+
+.spatialPulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #38BDF8;
+  box-shadow: 0 0 10px #38BDF8;
+  animation: pulseBlue 2s infinite ease-in-out;
+}
+
+@keyframes pulseBlue {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.spatialFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.775rem;
+  color: #94A3B8;
+}
+
+/* Bento Card: Studio Workspace Photography */
+.photoCard {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #0A1628;
+}
+
+.photoWrap {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photoCard:hover .photoImg {
+  transform: scale(1.05);
+}
+
+.photoBadgeOverlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: #34D399;
+}
+
+.photoBody {
+  padding: 1.75rem;
+  background: #FFFFFF;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photoTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.5rem;
+}
+
+.photoDesc {
+  font-size: 0.875rem;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+/* Bento Card: Engineering Manifesto */
+.manifestoCard {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.manifestoEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--electric-orange);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.manifestoTitle {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.manifestoDesc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.featureList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: auto;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1E293B;
+  background: #FFFFFF;
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* Bento Card: Telemetry & IP Specs */
+.metricsCard {
+  background: #0A1628;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.metricBox {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.metricVal {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--electric-orange);
+  margin-bottom: 0.25rem;
+}
+
+.metricLabel {
+  font-size: 0.775rem;
+  color: #94A3B8;
+  line-height: 1.4;
+}
+
+/* ─── Gallery Section ─── */
+.gallerySection {
+  margin: 5rem 0;
+}
+
+.galleryHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.galleryCard {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.galleryCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 119, 22, 0.35);
+  box-shadow: 0 16px 36px -8px rgba(244, 119, 22, 0.12);
+}
+
+.galleryImg {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.galleryCardBody {
+  padding: 1.75rem;
+}
+
+.galleryBadge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--electric-orange);
+  margin-bottom: 0.5rem;
+}
+
+.galleryCardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.5rem;
+}
+
+.galleryCardDesc {
+  font-size: 0.875rem;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+/* ─── Core Principles ─── */
+.sectionBlock {
+  margin: 5rem 0;
+}
+
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.pillarCard {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 2.25rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 119, 22, 0.35);
+  box-shadow: 0 16px 36px -8px rgba(244, 119, 22, 0.12);
+}
+
+.pillarNumber {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--electric-orange);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.pillarTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+}
+
+.pillarDesc {
+  font-size: 0.9rem;
+  color: #64748B;
+  line-height: 1.7;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .pillarGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

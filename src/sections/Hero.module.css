@@ -1,0 +1,198 @@
+/* GRIOT TECH — Hero section styles (Light & Crisp Technical Theme) */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  padding-top: 4.5rem;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(244, 119, 22, 0.07) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(16, 29, 53, 0.04) 0px, transparent 50%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: var(--container-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Left content column ── */
+.content {
+  flex: 0 0 55%;
+  max-width: 55%;
+  padding: 2rem 0;
+  z-index: 2;
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.75rem, 5.5vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--midnight-navy);
+  margin-bottom: 1.5rem;
+  white-space: pre-line;
+}
+
+.headlineAccent {
+  color: var(--electric-orange);
+  position: relative;
+}
+
+.headlineAccent::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(244, 119, 22, 0.2);
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+/* ── Hero Metrics Bar ── */
+.metricsBar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+  padding: 1rem 1.5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(16, 29, 53, 0.04);
+  width: fit-content;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--midnight-navy);
+  line-height: 1.2;
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  font-size: 0.675rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.metricDivider {
+  width: 1px;
+  height: 28px;
+  background-color: var(--light-border);
+}
+
+/* Technical status line */
+.statusLine {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  box-shadow: 0 4px 12px rgba(16, 29, 53, 0.04);
+  padding: 6px 14px;
+  border-radius: 999px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--electric-orange);
+  display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px var(--electric-orange);
+}
+
+/* ── Right 3D scene column ── */
+.scene {
+  flex: 0 0 45%;
+  max-width: 45%;
+  height: 650px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle background grid */
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(16, 29, 53, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 29, 53, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 5rem;
+  }
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .content {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ctas {
+    justify-content: center;
+  }
+  .statusLine {
+    margin: 0 auto;
+  }
+  .scene {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 400px;
+  }
+}

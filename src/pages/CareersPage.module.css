@@ -1,0 +1,293 @@
+.introBox {
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: 18px;
+  padding: 3rem;
+  margin: 3rem 0 4rem;
+  box-shadow: 0 10px 30px -10px rgba(16, 29, 53, 0.05);
+}
+
+.introHeading {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--midnight-navy);
+  margin-bottom: 2rem;
+}
+
+.perksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.perk {
+  display: flex;
+  flex-direction: column;
+}
+
+.perkNum {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--electric-orange);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.perkTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--midnight-navy);
+  margin-bottom: 0.5rem;
+}
+
+.perkDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.positionsSection {
+  margin-bottom: 5rem;
+}
+
+.positionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.roleCard {
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: 18px;
+  padding: 2.75rem;
+  box-shadow: 0 4px 16px rgba(16, 29, 53, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roleCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 119, 22, 0.4);
+  box-shadow: 0 16px 36px -8px rgba(244, 119, 22, 0.12);
+}
+
+.roleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.roleTitle {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--midnight-navy);
+  margin-bottom: 0.5rem;
+}
+
+.roleMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.metaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: #F1F5F9;
+  border: 1px solid var(--light-border);
+  color: var(--midnight-navy);
+}
+
+.deptBadge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--electric-orange);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.applyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8rem 1.6rem;
+  background: var(--electric-orange);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(244, 119, 22, 0.3);
+}
+
+.applyBtn:hover {
+  background: #E0680A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 119, 22, 0.4);
+}
+
+.roleDesc {
+  font-size: 0.975rem;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.reqsBlock {
+  border-top: 1px solid var(--light-border);
+  padding-top: 1.5rem;
+}
+
+.reqsTitle {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--midnight-navy);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.reqList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.reqItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.checkIcon {
+  color: var(--electric-orange);
+  flex-shrink: 0;
+}
+
+/* ── Section: Transparent Hiring Steps ── */
+.hiringSection {
+  background: #F8FAFC;
+  border: 1px solid var(--light-border);
+  border-radius: 20px;
+  padding: 3.5rem;
+  margin-bottom: 5rem;
+}
+
+.hiringStepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.hiringStepCard {
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+
+.hiringStepNum {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--electric-orange);
+  margin-bottom: 0.75rem;
+}
+
+.hiringStepTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--midnight-navy);
+  margin-bottom: 0.5rem;
+}
+
+.hiringStepDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Section: Benefits & Compensation ── */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.benefitCard {
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 4px 16px rgba(16, 29, 53, 0.04);
+}
+
+.benefitIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(244, 119, 22, 0.1);
+  color: var(--electric-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.benefitTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--midnight-navy);
+  margin-bottom: 0.5rem;
+}
+
+.benefitDesc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .hiringStepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .perksGrid,
+  .hiringStepsGrid,
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+  .roleHeader {
+    flex-direction: column;
+  }
+  .hiringSection {
+    padding: 2rem 1.5rem;
+  }
+}

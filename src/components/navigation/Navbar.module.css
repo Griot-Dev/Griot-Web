@@ -1,0 +1,428 @@
+/* GRIOT TECH — Trending Floating Capsule Navigation Bar (2025/2026 Standard) */
+
+.navbarWrapper {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.25rem;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrolled {
+  top: 0.65rem;
+}
+
+.inner {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1220px;
+  height: 62px;
+  padding: 0 1.25rem;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 0 0 1px rgba(15, 23, 42, 0.05),
+    0 10px 30px -4px rgba(15, 23, 42, 0.07),
+    0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrolled .inner {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 
+    0 0 0 1px rgba(15, 23, 42, 0.08),
+    0 16px 36px -8px rgba(15, 23, 42, 0.12),
+    0 4px 10px -2px rgba(15, 23, 42, 0.04);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ─── Brand Group ─── */
+.brandGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.logoIcon {
+  width: 30px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0F172A;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logoBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background: var(--electric-orange);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(15, 23, 42, 0.1);
+}
+
+.availabilityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 9999px;
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: #059669;
+  white-space: nowrap;
+}
+
+.livePulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulseBeacon 2s infinite ease-in-out;
+}
+
+@keyframes pulseBeacon {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+
+.availabilityText {
+  letter-spacing: -0.01em;
+}
+
+/* ─── Desktop Navigation ─── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 550;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navLink:hover {
+  color: #0F172A;
+  background: rgba(15, 23, 42, 0.05);
+}
+
+.navLinkActive {
+  color: #0F172A;
+  font-weight: 600;
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.chevron {
+  color: #94A3B8;
+  transition: transform 0.25s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: var(--electric-orange);
+}
+
+/* ─── Premium Mega Flyout Dropdown ─── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 580px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 
+    0 24px 50px -12px rgba(15, 23, 42, 0.16),
+    0 4px 16px rgba(15, 23, 42, 0.04);
+  z-index: 120;
+  animation: flyoutIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes flyoutIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.dropdownEyebrow {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.685rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #94A3B8;
+}
+
+.dropdownMeta {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--electric-orange);
+}
+
+.dropdownGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.dropdownCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropdownCard:hover {
+  background: rgba(244, 119, 22, 0.04);
+  border-color: rgba(244, 119, 22, 0.15);
+  transform: translateY(-1px);
+}
+
+.dropdownCardActive {
+  background: rgba(244, 119, 22, 0.06);
+  border-color: rgba(244, 119, 22, 0.2);
+}
+
+.cardIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #F8FAFC;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: #0F172A;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.dropdownCard:hover .cardIconBox {
+  background: var(--electric-orange);
+  color: #FFFFFF;
+  border-color: var(--electric-orange);
+  box-shadow: 0 4px 10px rgba(244, 119, 22, 0.3);
+}
+
+.cardContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0F172A;
+  margin-bottom: 0.2rem;
+}
+
+.dropdownCard:hover .cardTitle {
+  color: var(--electric-orange);
+}
+
+.cardArrow {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s ease;
+}
+
+.dropdownCard:hover .cardArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cardDesc {
+  font-size: 0.75rem;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+/* ─── Action CTA & Controls ─── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #F47716 0%, #EA580C 100%);
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 
+    0 4px 14px -2px rgba(244, 119, 22, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 8px 20px -3px rgba(244, 119, 22, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #FF8224 0%, #E05307 100%);
+}
+
+.ctaArrow {
+  transition: transform 0.2s ease;
+}
+
+.cta:hover .ctaArrow {
+  transform: translateX(3px);
+}
+
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 42px;
+  color: #0F172A;
+  background: rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  touch-action: manipulation;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.hamburger:hover,
+.hamburger:active {
+  background: rgba(15, 23, 42, 0.1);
+  border-color: rgba(15, 23, 42, 0.2);
+  transform: scale(1.05);
+}
+
+/* ─── Responsive Queries ─── */
+@media (max-width: 1100px) {
+  .availabilityBadge {
+    display: none;
+  }
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .cta {
+    display: none;
+  }
+  .inner {
+    height: 56px;
+    padding: 0 1rem;
+  }
+  .navbarWrapper {
+    top: 0.75rem;
+    padding: 0 0.85rem;
+  }
+}

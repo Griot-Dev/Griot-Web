@@ -1,0 +1,237 @@
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 3rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--light-border);
+  background: #FFFFFF;
+  color: var(--midnight-navy);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  border-color: rgba(244, 119, 22, 0.4);
+}
+
+.filterBtnActive {
+  background: var(--electric-orange);
+  border-color: var(--electric-orange);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(244, 119, 22, 0.25);
+}
+
+.telemetryBanner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background: #F8FAFC;
+  border: 1px solid var(--light-border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.telemetryItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.telemetryVal {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--electric-orange);
+}
+
+.telemetryLabel {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding-bottom: 6rem;
+}
+
+.projectCard {
+  background: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: 18px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(16, 29, 53, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(244, 119, 22, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(244, 119, 22, 0.12), 0 6px 18px rgba(16, 29, 53, 0.05);
+}
+
+.cardHeader {
+  margin-bottom: 1.5rem;
+}
+
+.metaGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.category {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--electric-orange);
+  font-weight: 600;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #F1F5F9;
+  border: 1px solid var(--light-border);
+  color: var(--text-secondary);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--electric-orange);
+  box-shadow: 0 0 6px var(--electric-orange);
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--midnight-navy);
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.description {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 900px;
+}
+
+.metricsRow {
+  display: flex;
+  gap: 3.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--light-border);
+  border-bottom: 1px solid var(--light-border);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--midnight-navy);
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  font-weight: 500;
+  color: var(--muted-steel);
+  text-transform: uppercase;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #F8FAFC;
+  border: 1px solid var(--light-border);
+  color: var(--midnight-navy);
+}
+
+.caseStudyLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--electric-orange);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.caseStudyLink:hover {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .telemetryBanner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    padding: 2rem;
+  }
+  .metricsRow {
+    gap: 1.5rem;
+  }
+  .telemetryBanner {
+    grid-template-columns: 1fr;
+  }
+}

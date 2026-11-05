@@ -1,0 +1,8 @@
+# GRIOT TECH Robots.txt
+# https://griottech.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://griottech.com/sitemap.xml

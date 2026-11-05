@@ -1,0 +1,162 @@
+.inspectorContainer {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle at 50% 50%, #101D35 0%, #060E1A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.canvasWrapper {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  cursor: grab;
+}
+
+.canvasWrapper:active {
+  cursor: grabbing;
+}
+
+/* Glass HUD Header */
+.hudHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(16, 29, 53, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 10;
+}
+
+.hudTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.signalDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34D399;
+  box-shadow: 0 0 10px #34D399;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.hudTitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hudSubtitle {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #8C98AA;
+}
+
+.hudControls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modeBtn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #CBD5E1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modeBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+.modeBtnActive {
+  background: rgba(244, 119, 22, 0.25);
+  border-color: var(--electric-orange);
+  color: #FFFFFF;
+}
+
+/* Bottom Telemetry HUD Overlay */
+.hudFooter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.85rem 1.5rem;
+  background: rgba(6, 14, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  color: #8C98AA;
+  gap: 1rem;
+}
+
+.telemetryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.telemetryLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.telemetryValue {
+  color: #E2E8F0;
+  font-weight: 500;
+}
+
+.interactiveHint {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(16, 29, 53, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #94A3B8;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .canvasWrapper {
+    height: 360px;
+  }
+  .hudFooter {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .hudControls {
+    overflow-x: auto;
+    max-width: 180px;
+  }
+}
